@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Ikan Mas Koki</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">IKAN MAS KOKI</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jenis-ikan.html">Jenis Ikan Mas Koki</a></li>
+            <li><a href="kualitas-air.html">Kualitas Air</a></li>
+        </ul>
+    </nav>
+
+    <!-- Jenis Ikan Mas Koki Section -->
+    <section class="fish-types-section">
+        <h2>Jenis-Jenis Ikan Mas Koki</h2>
+        <div class="fish-grid">
+            <!-- Setiap ikan akan tampil dalam kotak yang bisa diklik -->
+            <!-- Ikan Oranda -->
+            <div class="fish-card" onclick="showFishInfo('oranda')" style="background-color: #f8d7da;">
+                <img src="oranda.webp" alt="Oranda">
+                <h3>Oranda</h3>
+                <p>Ciri Utama: Memiliki tonjolan kepala (wen) yang khas, berbentuk seperti topi. Memiliki warna yang beragam, termasuk merah, oranye, putih, hitam, dan kombinasi warna.</p>
+            </div>
+
+            <!-- Ikan Ranchu -->
+            <div class="fish-card" onclick="showFishInfo('ranchu')" style="background-color: #f8d7da;">
+                <img src="ranchu.jpg" alt="Ranchu">
+                <h3>Ranchu</h3>
+                <p>Ciri Utama: Mirip dengan Lionhead tetapi bentuk tubuh bulat tanpa sirip punggung. Memiliki warna yang beragam merah, putih, dan kombinasi.</p>
+            </div>
+
+            <!-- Ikan Black Moor -->
+            <div class="fish-card" onclick="showFishInfo('black-moor')" style="background-color: #f8d7da;">
+                <img src="bmoor.jpg" alt="Black Moor">
+                <h3>Black Moor</h3>
+                <p>Ciri utama: Berwarna hitam pekat dengan mata besar menonjol.</p>
+            </div>
+
+            <!-- Ikan Ryukin -->
+            <div class="fish-card" onclick="showFishInfo('ryukin')" style="background-color: #f8d7da;">
+                <img src="ryukin1.jpg" alt="Ryukin">
+                <h3>Ryukin</h3>
+                <p>Ciri Utama: Tubuh pendek dan pundak yang tinggi, dengan ekor kipas lebar. Memiliki warna umumnya merah, putih, atau kombinasi dari keduanya.</p>
+            </div>
+
+            <!-- Ikan Lionhead -->
+            <div class="fish-card" onclick="showFishInfo('lionhead')" style="background-color: #f8d7da;">
+                <img src="lionhead.jpg" alt="Lionhead">
+                <h3>Lionhead</h3>
+                <p>Ciri Utama: Jambul pada kepala yang menyerupai surai singa. Memiliki warna yang beragam yaitu merah, putih, dan kombinasi.</p>
+            </div>
+
+            <!-- Ikan Fantail -->
+            <div class="fish-card" onclick="showFishInfo('fantail')" style="background-color: #f8d7da;">
+                <img src="fantail.jpg" alt="Fantail">
+                <h3>Fantail</h3>
+                <p>Ciri Utama: Ekor berbentuk kipas yang simetris. Memiliki warna yang beragam, termasuk merah, oranye, putih, dan kombinasi.</p>
+            </div>
+
+            <!-- Ikan Bubble Eye -->
+            <div class="fish-card" onclick="showFishInfo('bubble eye')" style="background-color: #f8d7da;">
+                <img src="BubbleEye.jpg" alt="Bubble Eye">
+                <h3>Bubble Eye</h3>
+                <p>Ciri Utama: Dua kantung berisi cairan di bawah mata. Memiliki warna yang Beragam, termasuk merah, putih, dan oranye.</p>
+            </div>
+
+            <!-- Ikan Telescope Eye -->
+            <div class="fish-card" onclick="showFishInfo('telescope eye')" style="background-color: #f8d7da;">
+                <img src="teleskopeye.jpg" alt="Telescope Eye">
+                <h3>Telescope Eye</h3>
+                <p>Ciri Utama: Mata besar yang menonjol keluar dari kepala. Memiliki warna beragam, termasuk hitam, merah, dan putih.</p>
+            </div>
+
+            <!-- Ikan Pearlscale -->
+            <div class="fish-card" onclick="showFishInfo('pearlscale')" style="background-color: #f8d7da;">
+                <img src="pearlscale.jpg" alt="Pearlscale">
+                <h3>Pearlscale</h3>
+                <p>Ciri Utama: Sisik yang tampak seperti mutiara bulat dan mengkilap. Memiliki warna seperti merah, putih, dan kombinasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kotak Info Besar yang Muncul Setelah Klik -->
+    <div id="fish-info-box" class="fish-info">
+        <div class="info-content">
+            <img id="info-image" src="" alt="Fish Image" class="info-image">
+            <div class="info-text">
+                <h3 id="info-name">Nama Ikan</h3>
+                <p id="info-description">Deskripsi ikan</p>
+                <h4>Variasi:</h4>
+                <div id="info-variations" class="variations-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Sistem Pakar Ikan Mas Koki. Semua hak dilindungi.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+                <li><a href="terms-of-service.html">Syarat & Ketentuan</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Link ke JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar Kualitas Air - Ikan Mas Koki</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Kualitas Air</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jenis-ikan.html">Jenis Ikan Mas Koki</a></li>
+            <li><a href="kualitas-air.html">Kualitas Air</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sistem Pakar -->
+    <section id="system" class="system">
+        <div class="container">
+            <!-- Gambar Header Ikan Mas Koki -->
+            <div class="header-image">
+                <img src="goldfish.jpg" alt="Ikan Mas Koki" class="header-img">
+            </div>
+            <h1>Sistem Pakar Kualitas Air untuk Ikan Mas Koki</h1>
+            <p>Silakan masukkan parameter kualitas air yang digunakan untuk ikan mas koki Anda. Sistem ini akan membantu mengevaluasi kualitas air dan memberikan rekomendasi perawatan.</p>
+
+            <!-- Formulir Input Parameter -->
+            <form id="waterQualityForm">
+                <!-- Suhu Air -->
+                <div class="form-group" id="temp-group">
+                    <label for="temperature">Suhu Air (°C):
+                        <span class="tooltip-icon" tabindex="0">?</span>
+                        <span class="tooltip-text">Masukkan nilai suhu dari air yang anda gunakan, jika anda ingin masukkan nilai sendiri pilih "masukkan nilai manual", masukkan nilai manual dalam bentuk 1 angka dibelakang koma contoh = 10.1 (gunakan titik)</span>
+                    </label>
+                    <select id="temperature" name="temperature" required>
+                        <option value="" disabled selected>Pilih suhu air</option>
+                        <option value="10.0">10°C</option>
+                        <option value="11.0">11°C</option>
+                        <option value="12.0">12°C</option>
+                        <option value="13.0">13°C</option>
+                        <option value="14.0">14°C</option>
+                        <option value="15.0">15°C</option>
+                        <option value="16.0">16°C</option>
+                        <option value="17.0">17°C</option>
+                        <option value="18.0">18°C</option>
+                        <option value="19.0">19°C</option>
+                        <option value="20.0">20°C</option>
+                        <option value="21.0">21°C</option>
+                        <option value="22.0">22°C</option>
+                        <option value="23.0">23°C</option>
+                        <option value="24.0">24°C</option>
+                        <option value="25.0">25°C</option>
+                        <option value="26.0">26°C</option>
+                        <option value="27.0">27°C</option>
+                        <option value="28.0">28°C</option>
+                        <option value="29.0">29°C</option>
+                        <option value="30.0">30°C</option>
+                        <option value="manual">Masukkan nilai manual</option>
+                    </select>
+                    <input type="number" id="manualTemperature" name="manualTemperature" placeholder="Atau masukkan suhu lain (°C)" style="display:none;">
+                </div>
+
+                <!-- pH Air -->
+                <div class="form-group" id="ph-group">
+                    <label for="ph">pH Air:
+                        <span class="tooltip-icon" tabindex="0">?</span>
+                        <span class="tooltip-text">Masukkan nilai pH dari air yang Anda gunakan, jika anda ingin masukkan nilai sendiri pilih "masukkan nilai manual", masukkan nilai manual dalam bentuk 1 angka dibelakang koma contoh = 7.1 (gunakan titik)</span>
+                    </label>
+                    <select id="ph" name="ph" required>
+                        <option value="" disabled selected>Pilih pH air</option>
+                        <option value="1.0">1</option>
+                        <option value="2.0">2</option>
+                        <option value="3.0">3</option>
+                        <option value="4.0">4</option>
+                        <option value="5.0">5</option>
+                        <option value="6.0">6</option>
+                        <option value="7.0">7</option>
+                        <option value="8.0">8</option>
+                        <option value="9.0">9</option>
+                        <option value="10.0">10</option>
+                        <option value="manual">Masukkan nilai manual</option>
+                    </select>
+                    <input type="number" id="manualPH" name="manualPH" placeholder="Atau masukkan pH lain" step="0.1" style="display:none;">
+                </div>
+
+                <!-- Kadar Oksigen -->
+                <div class="form-group" id="oxygen-group">
+                    <label for="oxygen">Kadar Oksigen (mg/L):
+                        <span class="tooltip-icon" tabindex="0">?</span>
+                        <span class="tooltip-text">Masukkan nila kadar oksigen dari air yang akan Anda gunakan, jika anda ingin masukkan nilai sendiri pilih "masukkan nilai manual", masukkan nilai manual dalam bentuk 1 angka dibelakang koma contoh = 4.3 (gunakan titik)</span>
+                    </label>
+                    <select id="oxygen" name="oxygen" required>
+                        <option value="" disabled selected>Pilih kadar oksigen</option>
+                        <option value="1.0">1 mg/L</option>
+                        <option value="2.0">2 mg/L</option>
+                        <option value="3.0">3 mg/L</option>
+                        <option value="4.0">4 mg/L</option>
+                        <option value="5.0">5 mg/L</option>
+                        <option value="6.0">6 mg/L</option>
+                        <option value="7.0">7 mg/L</option>
+                        <option value="8.0">8 mg/L</option>
+                        <option value="9.0">9 mg/L</option>
+                        <option value="manual">Masukkan nilai manual</option>
+                    </select>
+                    <input type="number" id="manualOxygen" name="manualOxygen" placeholder="Atau masukkan kadar oksigen lain (mg/L)" step="0.1" style="display:none;">
+                </div>
+
+                <!-- Tingkat Kekeruhan -->
+                <div class="form-group" id="turbidity-group">
+                    <label for="turbidity">Kejernihan Air:
+                        <span class="tooltip-icon" tabindex="0">?</span>
+                        <span class="tooltip-text">Masukkan nilai tingkat kejernihan dari air yang Anda gunakan, pilihan dibawah ini merupakan skala tingkat kejernihan air dari ( 1 - 10 ), semakin tinggi nilai artinya semakin jernih</span>
+                    </label>
+                    <select id="turbidity" name="turbidity" required>
+                        <option value="" disabled selected>Pilih tingkat kejernihan</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <!-- Bau Air -->
+                <div class="form-group" id="odor-group">
+                    <label for="odor">Bau Air:
+                        <span class="tooltip-icon" tabindex="0">?</span>
+                        <span class="tooltip-text">Masukkan nilai Bau dari air yang Anda gunakan, pilihan dibawah ini merupakan skala tingkat Bau air dari ( 1 - 10 ), semakin tinggi nilai artinya tidak ada bau yang aneh.</span>
+                    </label>
+                    <select id="odor" name="odor" required>
+                        <option value="" disabled selected>Pilih tingkat bau air</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit" id="submitButton">Kirim</button>
+                </div>
+            </form>
+
+            <!-- Hasil Diagnosa -->
+            <div class="result-container" id="resultSection" style="display:none;">
+                <div class="diagnosis">
+                    <h2>Status Kelayakan Air</h2>
+                    <p id="diagnosisStatus" class="status">Status kelayakan air akan ditampilkan di sini.</p>
+                </div>
+
+                <div class="user-input">
+                    <h2>Indikator Input Pengguna</h2>
+                    <ul>
+                        <li>Suhu Air: <span id="userTemp">-</span></li>
+                        <li>pH Air: <span id="userPH">-</span></li>
+                        <li>Kadar Oksigen: <span id="userOxygen">-</span></li>
+                        <li>Kejernihan Air: <span id="userTurbidity">-</span></li>
+                        <li>Bau Air: <span id="userOdor">-</span></li>
+                    </ul>
+                </div>
+
+                <div class="result-percentage">
+                    <h2>Nilai Kelayakan Air</h2>
+                    <p id="percentageResult" class="percentage">Persentase kelayakan air akan ditampilkan di sini.</p>
+                    <h3>Deskripsi Kondisi Air</h3>
+                    <p id="percentageDescription">Deskripsi kondisi air akan ditampilkan di sini.</p>
+                </div>
+
+                <div class="solution">
+                    <h2>Solusi</h2>
+                    <p id="solutionText">Solusi akan ditampilkan di sini berdasarkan hasil evaluasi.</p>
+                </div>
+
+                <div class="recommendation">
+                    <h2>Rekomendasi</h2>
+                    <p id="recommendationText">Rekomendasi akan ditampilkan di sini untuk memperbaiki kualitas air.</p>
+                </div>
+
+                <!-- Tombol Selesai -->
+                <div class="finish-button-container">
+                    <button type="button" id="resetButton" class="btn btn-reset">Reset</button>
+                    <a href="index.html" class="finish-button">Selesai</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Pakar Section -->
+    <section id="contact-expert" class="contact-expert">
+        <h2>Kontak Pakar</h2>
+        <p>Jika Anda memiliki pertanyaan lebih lanjut, hubungi pakar kami:</p>
+        <ul>
+            <li>Nama: Dr. Andi Wijaya</li>
+            <li>Email: drandi@goldfishcare.com</li>
+            <li>Telepon: +62 812-3456-7890</li>
+            <li>Media Sosial: <a href="https://instagram.com/ikankoki.expert">@ikankoki.expert</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Sistem Pakar Ikan Mas Koki. Semua hak dilindungi.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+                <li><a href="terms-of-service.html">Syarat & Ketentuan</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="sistem.js"></script>
+</body>
+</html>
